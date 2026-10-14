@@ -19,6 +19,7 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "outDir": "dist/",
-    "rootDir": "src/"
+    "rootDir": "src/",
+    "types": ["jest", "node"]
   }
 }

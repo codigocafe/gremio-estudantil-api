@@ -15,8 +15,9 @@ export default class Database {
 
   async query(consult) {
     this.connect();
-    return await this.db.query(consult);
+    const result = await this.db.query(consult);
     this.disconnect();
+    return result;
   }
 
   async disconnect() {

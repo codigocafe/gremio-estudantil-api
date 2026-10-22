@@ -10,8 +10,10 @@
     "start": "nest start",
     "start:prod": "node dist/main",
     "dev": "nest start --watch",
-    "test": "jest ",
-    "test:watch": "jest -c=jest.config.ts --watch"
+    "test": "jest -c=jest.config.ts",
+    "test:watch": "jest -c=jest.config.ts --watch",
+    "migrate:up": "tsx src/infra/migration.ts",
+    "migrate:create": "node-pg-migrate -m src/infra/migrations/ create -j ts"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
@@ -42,6 +44,7 @@
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.23.15",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.20.0"
   }
